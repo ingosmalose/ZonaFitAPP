@@ -113,6 +113,7 @@ public class CustomerDAO implements IClienteDAO {
            ps.setInt(3,customer.getMember());
            ps.setInt(4,customer.getId());
            ps.execute();
+           return true;
         }catch(Exception e){
             System.out.println("Error updating customer information : "+e);
         }finally {
